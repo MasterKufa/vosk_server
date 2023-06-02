@@ -1,0 +1,31 @@
+{
+  "name": "vosk_server",
+  "version": "1.0.0",
+  "description": "Simple ffmpeg docker wrapper on node.",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "start:ci": "ts-node /app/src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MasterKufa/vosk_server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MasterKufa/vosk_server/issues"
+  },
+  "homepage": "https://github.com/MasterKufa/vosk_server#readme",
+  "dependencies": {
+    "socket.io": "^4.6.1",
+    "ts-node": "^10.9.1",
+    "vosk": "^0.3.39",
+    "@master_kufa/tools": "2.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.59.7",
+    "typescript": "^5.0.4"
+  }
+}
