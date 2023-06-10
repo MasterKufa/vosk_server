@@ -1,5 +1,5 @@
 const { loadModel, transcriptFromFile, freeModel } = require('vosk');
-import { resolve } from 'path';
+const { resolve } = require('path');
 
 const MODELS_DIR = resolve('app', 'models', 'vosk-model-ru-0.42');
 
@@ -14,10 +14,9 @@ const speechToText = async ({ inputName, id }) => {
     process.send({ ...srResult, success: true, id });
   } catch {
     process.send({ success: false, id });
-    process.exit(1);
   } finally {
     freeModel(model);
-    exec(`rm "/app/input/${inputName}"`, process.exit);
+    // exec(`rm "/app/input/${inputName}"`, process.exit);
   }
 };
 
